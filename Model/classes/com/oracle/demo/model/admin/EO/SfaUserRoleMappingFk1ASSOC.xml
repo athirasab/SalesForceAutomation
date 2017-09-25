@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SfaUserRoleMappingFk1ASSOC"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="SfaEmployees"
+    Cardinality="1"
+    Source="true"
+    Owner="com.oracle.demo.model.admin.EO.SfaEmployeesEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="SfaEmployees"/>
+      <Attr Name="_foreignKey" Value="com.oracle.demo.model.admin.EO.SfaEmployeesEO.SfaEmployeesPk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.oracle.demo.model.admin.EO.SfaEmployeesEO.EmpId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="SfaUserRoleMapping"
+    Cardinality="1"
+    Owner="com.oracle.demo.model.admin.EO.SfaUserRoleMappingEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="SfaUserRoleMapping"/>
+      <Attr Name="_foreignKey" Value="com.oracle.demo.model.admin.EO.SfaUserRoleMappingEO.SfaUserRoleMappingFk1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.oracle.demo.model.admin.EO.SfaUserRoleMappingEO.EmpId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>
