@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="Employees.jspx" id="d1" binding="#{backingBeanScope.backing_Employees.d1}">
+            <af:form id="f1" binding="#{backingBeanScope.backing_Employees.f1}">
+                <af:pageTemplate viewId="/oracle/ui/pattern/dynamicShell/dynamicTabShell.jspx" id="pt1">
+                    <f:facet name="copyright"/>
+                    <f:facet name="about"/>
+                    <f:facet name="navigation"/>
+                    <f:facet name="globalLinks"/>
+                    <f:facet name="status"/>
+                    <f:facet name="globalToolbar"/>
+                    <f:facet name="globalSearch"/>
+                    <f:facet name="globalTabs">
+                        <af:navigationPane hint="tabs" id="np1" binding="#{backingBeanScope.backing_Employees.np1}">
+                            <af:commandNavigationItem id="ni1" text="Manage Employees" selected="true"
+                                                      binding="#{backingBeanScope.backing_Employees.ni1}"
+                                                      action="employees"/>
+                            <af:commandNavigationItem text="Manage Products" id="cni1"
+                                                      binding="#{backingBeanScope.backing_Employees.cni1}"
+                                                      action="products"/>
+                            <af:commandNavigationItem text="Manage Roles" id="cni2"
+                                                      binding="#{backingBeanScope.backing_Employees.cni2}"
+                                                      action="roles"/>
+                        </af:navigationPane>
+                    </f:facet>
+                    <f:facet name="welcome"/>
+                    <f:facet name="innerToolbar"/>
+                </af:pageTemplate>
+            </af:form>
+        </af:document>
+    </f:view>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_Employees-->
+</jsp:root>
